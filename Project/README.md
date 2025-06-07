@@ -8,7 +8,7 @@
 ![Kaggle](https://img.shields.io/badge/Kaggle-Notebook-blue?logo=kaggle&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-yellow?logo=mit&logoColor=white)
 
-A deep learning project that uses Convolutional Neural Networks (CNN) to classify and predict Simpsons characters from images. This model can identify various characters from the iconic animated TV series with high accuracy.
+A deep learning project that uses Convolutional Neural Networks (CNN) to classify and predict Simpsons characters from images. This is an ongoing project with moderate performance that serves as a foundation for further improvements.
 
 ## 📋 Table of Contents
 
@@ -20,18 +20,20 @@ A deep learning project that uses Convolutional Neural Networks (CNN) to classif
 - [Results](#results)
 - [Key Features](#key-features)
 - [Technical Details](#technical-details)
+- [Current Challenges](#current-challenges)
 - [Contributing](#contributing)
 - [License](#license)
 
 ## 🚀 Project Overview
 
-This project implements a computer vision solution to automatically classify Simpsons characters using deep learning techniques. The model is trained on a diverse dataset of character images and can predict character identities with high accuracy.
+This project implements a computer vision solution to automatically classify Simpsons characters using deep learning techniques. The model is currently trained on a diverse dataset of character images and achieves moderate accuracy, with significant room for improvement and optimization.
 
 ### Objectives
-- Build a robust CNN model for character classification
-- Achieve high accuracy in predicting Simpsons characters
+- Build a CNN model for character classification
+- Establish a baseline for Simpsons character recognition
 - Implement data augmentation techniques for better generalization
-- Create a user-friendly interface for character prediction
+- Create a foundation for future model improvements
+- Develop a framework for character prediction
 
 ### Key Technologies
 - **Deep Learning Framework**: TensorFlow/Keras
@@ -216,29 +218,23 @@ def plot_training_history(history):
 
 ## 📈 Results
 
-### Model Performance
-- **Training Accuracy**: 95.2%
-- **Validation Accuracy**: 91.8%
-- **Test Accuracy**: 90.5%
-- **Top-5 Accuracy**: 98.1%
+### Current Model Performance
+- **Training Accuracy**: 46.88%
+- **Validation Accuracy**: 52.71%
+- **Performance Gap**: The model shows room for significant improvement
+- **Validation vs Training**: Validation accuracy is higher than training accuracy, suggesting the model may benefit from additional training or architecture adjustments
 
-### Character Recognition Performance
-| Character | Precision | Recall | F1-Score |
-|-----------|-----------|--------|----------|
-| Homer Simpson | 0.94 | 0.96 | 0.95 |
-| Bart Simpson | 0.92 | 0.89 | 0.90 |
-| Lisa Simpson | 0.91 | 0.93 | 0.92 |
-| Marge Simpson | 0.89 | 0.87 | 0.88 |
-| Ned Flanders | 0.88 | 0.85 | 0.86 |
-| ... | ... | ... | ... |
+### Performance Analysis
+The current model performance indicates several areas for improvement:
+- **Moderate Accuracy**: With ~53% validation accuracy, the model correctly identifies characters about half the time
+- **Baseline Established**: This serves as a solid baseline for future improvements
+- **Learning Pattern**: The validation accuracy being higher than training accuracy suggests potential for better optimization
 
-### Confusion Matrix
-The model shows strong performance across all major characters, with some confusion between similar-looking characters (e.g., background characters with similar features).
-
-### Learning Curves
-- **Convergence**: Model converges around epoch 40-50
-- **Overfitting**: Minimal overfitting observed with dropout regularization
-- **Generalization**: Good generalization on validation set
+### Current Challenges Observed
+- Multi-class classification with 20+ characters is complex
+- Character similarity poses classification difficulties
+- Dataset quality and balance may need attention
+- Model architecture may require optimization
 
 ## ✨ Key Features
 
@@ -255,10 +251,10 @@ The model shows strong performance across all major characters, with some confus
 - **Early Stopping**: Prevents overfitting with patience-based stopping
 
 ### Evaluation Metrics
-- **Accuracy Metrics**: Top-1 and Top-5 accuracy
-- **Per-Class Metrics**: Precision, recall, F1-score for each character
-- **Confusion Matrix**: Detailed error analysis
-- **ROC Curves**: Multi-class classification performance
+- **Accuracy Metrics**: Top-1 and Top-5 accuracy tracking
+- **Per-Class Metrics**: Precision, recall, F1-score analysis planned
+- **Confusion Matrix**: Detailed error analysis for improvement insights
+- **Learning Curves**: Training progress visualization
 
 ## 🔧 Technical Details
 
@@ -304,46 +300,65 @@ callbacks = [
 ]
 ```
 
-## 📊 Experimental Results
+## 🚧 Current Challenges
 
-### Ablation Studies
-- **Effect of Data Augmentation**: +5.2% accuracy improvement
-- **Dropout Impact**: Reduced overfitting by 15%
-- **Learning Rate Scheduling**: Faster convergence (20% fewer epochs)
-- **Batch Size Analysis**: Optimal performance at batch size 32
+### Performance Issues
+- **Accuracy Gap**: Current ~53% accuracy indicates significant room for improvement
+- **Class Imbalance**: Some characters may have insufficient training data
+- **Feature Complexity**: Animated characters present unique classification challenges
+- **Overfitting Risk**: Need to balance model complexity with generalization
 
-### Comparison with Other Architectures
-| Model | Parameters | Accuracy | Training Time |
-|-------|------------|----------|---------------|
-| Custom CNN | 15M | 90.5% | 2 hours |
-| VGG16 (Fine-tuned) | 134M | 93.2% | 4 hours |
-| ResNet50 | 23M | 92.8% | 3 hours |
-| EfficientNet-B0 | 4M | 91.9% | 1.5 hours |
+### Technical Challenges
+- **Dataset Quality**: Image quality and consistency variations
+- **Character Similarity**: Some characters share similar visual features
+- **Background Noise**: Images may contain distracting background elements
+- **Pose Variation**: Characters appear in various poses and expressions
+
+### Identified Areas for Improvement
+- **Model Architecture**: Current architecture may be too simple or complex
+- **Hyperparameter Tuning**: Learning rate, batch size, and regularization need optimization
+- **Data Preprocessing**: Enhanced preprocessing techniques needed
+- **Training Strategy**: Longer training or different optimization strategies
+
+## 📊 Experimental Analysis
+
+### Current Performance Breakdown
+- **Training Accuracy**: 46.88% - Indicates model is still learning
+- **Validation Accuracy**: 52.71% - Better than training, suggests potential
+- **Performance Gap**: Room for significant improvement
+- **Baseline Established**: Good foundation for iterative improvements
+
+### Next Experiments Planned
+1. **Architecture Comparison**: Test different CNN architectures
+2. **Transfer Learning**: Compare pre-trained model performance
+3. **Hyperparameter Grid Search**: Systematic parameter optimization
+4. **Data Augmentation Impact**: Measure effect of different augmentation strategies
+5. **Class Balance Analysis**: Investigate per-class performance
 
 ## 🤝 Contributing
 
-Contributions are welcome! Here's how you can help:
+Contributions are especially welcome given the current performance challenges! Here's how you can help:
 
-### Ways to Contribute
-1. **Improve Model Architecture**: Experiment with new architectures
-2. **Add More Characters**: Expand the character dataset
-3. **Optimize Performance**: Improve training speed and accuracy
-4. **Create Applications**: Build tools using the trained model
-5. **Documentation**: Improve README and code documentation
+### Priority Areas for Contribution
+1. **Model Architecture**: Experiment with different CNN designs
+2. **Hyperparameter Tuning**: Help optimize training parameters
+3. **Data Quality**: Improve dataset cleaning and preparation
+4. **Transfer Learning**: Implement and compare pre-trained models
+5. **Performance Analysis**: Deep dive into model performance issues
 
 ### Development Setup
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
 4. Test thoroughly
-5. Submit a pull request
+5. Submit a pull request with performance comparisons
 
 ### Contribution Guidelines
-- Follow PEP 8 style guidelines
+- Include performance metrics for any model changes
+- Document hyperparameter choices and reasoning
+- Provide before/after accuracy comparisons
 - Add comprehensive docstrings
-- Include unit tests for new features
-- Update documentation as needed
-- Provide example usage for new functionality
+- Update documentation with new findings
 
 ## 📚 References and Resources
 
@@ -363,41 +378,39 @@ Contributions are welcome! Here's how you can help:
 
 ## 🐛 Troubleshooting
 
-### Common Issues
+### Current Known Issues
 
-#### Memory Errors
+#### Low Accuracy Solutions
+- **Increase Model Complexity**: Add more layers or parameters
+- **Better Data Preprocessing**: Improve image quality and consistency
+- **Transfer Learning**: Use pre-trained models as feature extractors
+- **Extended Training**: Allow model to train for more epochs
+- **Learning Rate Adjustment**: Fine-tune learning rate schedule
+
+#### Common Performance Issues
 ```python
-# Reduce batch size
+# Try different optimizers
+optimizer = tf.keras.optimizers.SGD(learning_rate=0.01, momentum=0.9)
+# or
+optimizer = tf.keras.optimizers.RMSprop(learning_rate=0.001)
+
+# Adjust learning rate schedule
+lr_schedule = tf.keras.optimizers.schedules.ExponentialDecay(
+    initial_learning_rate=0.001,
+    decay_steps=1000,
+    decay_rate=0.9
+)
+```
+
+#### Memory and Training Issues
+```python
+# Reduce batch size if memory issues
 batch_size = 16  # Instead of 32
 
 # Use mixed precision training
 from tensorflow.keras.mixed_precision import experimental as mixed_precision
 policy = mixed_precision.Policy('mixed_float16')
 mixed_precision.set_policy(policy)
-```
-
-#### Low Accuracy
-- Check data quality and labeling
-- Increase dataset size
-- Adjust learning rate
-- Add more data augmentation
-- Reduce model complexity if overfitting
-
-#### Slow Training
-- Use GPU acceleration
-- Reduce image size
-- Implement data pipeline optimization
-- Use transfer learning
-
-### Performance Optimization
-```python
-# Optimize data loading
-tf.data.experimental.AUTOTUNE
-dataset = dataset.cache().prefetch(tf.data.experimental.AUTOTUNE)
-
-# Enable mixed precision
-from tensorflow.keras.mixed_precision import experimental as mixed_precision
-mixed_precision.set_policy('mixed_float16')
 ```
 
 ## 📄 License
@@ -411,9 +424,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Kaggle Platform**: For providing free GPU resources for training
 - **The Simpsons**: For creating such memorable and distinct characters
 - **Open Source Community**: For contributing to the tools and libraries used
-  
+
+## 📞 Contact
+
+- Email: nirman0511@gmail.com
+- LinkedIn: www.linkedin.com/in/nirmanpatel
+
 ---
 
-⭐ **If you found this project helpful, please give it a star on Kaggle!**
+⭐ **This project is actively seeking contributions to improve model performance!**
 
-*D'oh! Let's classify some Simpsons characters!* 🍩
+*Current Status: Baseline established at ~53% accuracy - significant room for improvement!* 🚀
