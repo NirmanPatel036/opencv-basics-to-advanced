@@ -1,4 +1,4 @@
-# OpenCV Complete Guide: From Basics to Advanced
+# OpenCV Guide: From Basics to Advanced
 
 ![OpenCV Logo](https://opencv.org/wp-content/uploads/2022/05/logo.png)
 
@@ -189,7 +189,7 @@ for (x, y, w, h) in faces:
 - **labels.npy**: Corresponding labels for the features
 - **haar_face.xml**: Haar cascade for face detection
 - **Faces/**: Directory containing training images
-- **main/**: Additional implementation files
+- **val/**: Directory containing testing images
 
 #### Recognition Pipeline
 1. **Data Collection**: Gathering face images for training (`Faces/` directory)
@@ -251,28 +251,28 @@ mediapipe>=0.8.0
 
 ## 🎓 Learning Path
 
-### Beginner (Week 1-2)
+### Beginner
 1. Start with `Basics/essentialFunctions.py` to understand core OpenCV operations
 2. Learn image loading and display with `readImg.py`
 3. Practice video processing with `readVideo.py`
 4. Experiment with drawing functions in `draw.py`
 5. Master basic transformations using `transform.py`
 
-### Intermediate (Week 3-4)
+### Intermediate
 1. Explore contour detection with `contours.py`
 2. Work through image scaling and resizing in `rescale.py`
 3. Master advanced image processing techniques in the `Advanced/` folder
 4. Start with `thresh.py` for thresholding operations
 5. Practice with `smoothing.py` and `masking.py`
 
-### Advanced (Week 5-6)
+### Advanced
 1. Implement bitwise operations using `bitwise.py`
 2. Work with color spaces in `spaces.py`
 3. Practice histogram processing with `histogram.py`
 4. Master edge detection techniques in `gradients.py`
 5. Learn channel manipulation with `splitmerge.py`
 
-### Face Technologies (Week 7-8)
+### Face Technologies
 1. Start with face detection using `Face Detection/face_detect.py`
 2. Build a face recognition system with `Face Recognition/faces_train.py`
 3. Test recognition accuracy with `face_recognition.py`
@@ -324,15 +324,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Face recognition library contributors
 - Computer vision research community
 - All contributors to this repository
-
-## 📞 Contact
-
-If you have any questions or suggestions, feel free to:
-- Open an issue on GitHub
-- Contact me at [your-email@example.com]
-- Connect on LinkedIn: [Your LinkedIn Profile]
-
----
 
 ⭐ If you found this repository helpful, please give it a star!
 
