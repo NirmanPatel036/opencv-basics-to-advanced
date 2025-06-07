@@ -141,6 +141,8 @@ pip install seaborn>=0.11.0
 pip install jupyter
 pip install ipykernel
 ```
+### Kaggle Notebook 🔗
+https://www.kaggle.com/code/nirmanmpatel/simpsons-prediction-model
 
 ### Setup Instructions
 1. **Clone or download the Kaggle notebook**
