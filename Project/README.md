@@ -20,7 +20,6 @@ A deep learning project that uses Convolutional Neural Networks (CNN) to classif
 - [Results](#results)
 - [Key Features](#key-features)
 - [Technical Details](#technical-details)
-- [Future Improvements](#future-improvements)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -305,32 +304,6 @@ callbacks = [
 ]
 ```
 
-## 🔮 Future Improvements
-
-### Model Enhancements
-- **Transfer Learning**: Implement pre-trained models (EfficientNet, Vision Transformer)
-- **Ensemble Methods**: Combine multiple models for better accuracy
-- **Attention Mechanisms**: Add attention layers for better feature focus
-- **Model Compression**: Optimize for mobile deployment
-
-### Dataset Expansion
-- **More Characters**: Include additional secondary characters
-- **Diverse Poses**: Add more varied character poses and expressions
-- **Scene Context**: Include background context for better recognition
-- **Video Frames**: Extract frames from episodes for more training data
-
-### Application Features
-- **Real-time Detection**: Webcam-based character detection
-- **Mobile App**: Deploy model to mobile devices
-- **Web Interface**: Create web-based character recognition tool
-- **API Development**: RESTful API for character prediction service
-
-### Advanced Techniques
-- **Object Detection**: Implement YOLO/R-CNN for character localization
-- **Face Recognition**: Focus on facial features for better accuracy
-- **Multi-label Classification**: Identify multiple characters in single image
-- **Generative Models**: Create new character images using GANs
-
 ## 📊 Experimental Results
 
 ### Ablation Studies
@@ -438,24 +411,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Kaggle Platform**: For providing free GPU resources for training
 - **The Simpsons**: For creating such memorable and distinct characters
 - **Open Source Community**: For contributing to the tools and libraries used
-
-## 📞 Contact
-
-- **Kaggle Profile**: [nirmanmpatel](https://www.kaggle.com/nirmanmpatel)
-- **GitHub**: [Your GitHub Profile]
-- **Email**: [your-email@example.com]
-- **LinkedIn**: [Your LinkedIn Profile]
-
-## 🎯 Project Status
-
-- ✅ **Data Collection**: Complete
-- ✅ **Model Development**: Complete
-- ✅ **Training**: Complete
-- ✅ **Evaluation**: Complete
-- 🔄 **Deployment**: In Progress
-- 🔄 **Mobile App**: Planned
-- 🔄 **Web Interface**: Planned
-
+  
 ---
 
 ⭐ **If you found this project helpful, please give it a star on Kaggle!**
